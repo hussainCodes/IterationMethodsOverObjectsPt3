@@ -68,7 +68,7 @@ console.log(countCourses(students[1]));
 
 const listAllCourses = (students) => {
      let wantedCourses = [ ];
-     students.map(student => student.courses.map(course => wantedCourses.find((c) => c == course) == undefined  ? wantedCourses.push(course): false));
+     students.forEach(student => student.courses.forEach(course => wantedCourses.find((c) => c == course) == undefined  ? wantedCourses.push(course): false));
      return wantedCourses;
 }
 console.log(listAllCourses(students))
